@@ -44,8 +44,8 @@ local function commands(cmds)
   _commands = cmds or {}
 end
 
-vim.cmd([[command Vassal lua require('vassal').launch()]])
-vim.cmd([[command Vl lua require('vassal').launch()]])
+vim.api.nvim_create_user_command('Vassal', launch)
+vim.api.nvim_create_user_command('Vl', launch)
 
 local M = {
   launch = launch,
