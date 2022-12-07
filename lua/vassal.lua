@@ -44,8 +44,8 @@ local function commands(cmds)
   _commands = cmds or {}
 end
 
-vim.api.nvim_create_user_command('Vassal', launch)
-vim.api.nvim_create_user_command('Vl', launch)
+vim.api.nvim_create_user_command('Vassal', launch, {})
+vim.api.nvim_create_user_command('Vl', launch, {})
 
 local M = {
   launch = launch,
