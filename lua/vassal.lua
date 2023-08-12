@@ -27,7 +27,7 @@ local options = {
 
 local function launch()
   for _, command in ipairs(_commands) do
-    vim.notify(string.format('running [%s]', command), lvl.INFO)
+    vim.notify(string.format('… running [%s]', command), lvl.INFO)
     local job_id = fn.jobstart(command, options)
     if job_id == 0 then
       vim.notify('[vassal] invalid argument', lvl.ERROR)
